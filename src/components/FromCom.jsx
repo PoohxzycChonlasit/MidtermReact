@@ -30,7 +30,7 @@ export default function FromCom({ editingTodo, onDone }) {
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input
           className="w-full rounded-lg border px-3 py-2 "
-          placeholder="New todo"
+          placeholder="Create note"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
@@ -57,7 +57,7 @@ export default function FromCom({ editingTodo, onDone }) {
             disabled={!title.trim() || isPending}
             className="w-full rounded-lg bg-teal-500 py-2 text-white"
           >
-            Add
+            + Create note
           </button>
         )}
       </form>

@@ -1,8 +1,9 @@
 import { Pencil, Trash2 } from "lucide-react";
 import { useDeleteTodo, useUpdateTodo } from "../hooks/useTodos";
 
+
 export default function ItemCom({ note, onEdit }) {
-  const updateTodo = useUpdateTodo();
+  const updateTodo = useUpdateTodo()
   const deleteTodo = useDeleteTodo();
 
   function handleDelete() {
@@ -13,24 +14,14 @@ export default function ItemCom({ note, onEdit }) {
     updateTodo.mutate({ id: note.id, completed: !note.completed });
   }
 
-  return (
+    return (
     <li className="flex items-center justify-between rounded-lg border bg-white px-4 py-3 shadow-sm transition-shadow hover:shadow-md">
       <label className="flex items-center gap-3">
-        <input
-          type="checkbox"
-          checked={note.completed}
-          onChange={handleToggle}
-        />
-        <span className={note.completed ? "text-red-500 line-through" : ""}>
-          {note.title}
-        </span>
+        <input type="checkbox" checked={note.completed} onChange={handleToggle} />
+        <span className={note.completed ? 'text-red-500 line-through' : ''}>{note.title}</span>
       </label>
       <div className="flex items-center gap-3">
-        <button
-          onClick={() => onEdit(note)}
-          className="text-yellow-500"
-          aria-label="Edit note"
-        >
+        <button onClick={() => onEdit(note)} className="text-yellow-500" aria-label="Edit note">
           <Pencil size={18} />
         </button>
         <button
