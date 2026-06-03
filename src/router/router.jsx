@@ -4,7 +4,16 @@ import EditPages from "../pages/EditPages";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/edit", element: <EditPages /> },
-  { path: "/create", element: <CreatePages /> },
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/create",
+    element: <CreatePages />,
+  },
+  {
+    path: "/edit/:noteId",
+    element: <EditPages />,
+  },
 ]);
