@@ -10,7 +10,7 @@ export async function getNotes(params = {}) {
     }
   );
 
-  return data?.data?.items ?? [];
+  return data.data.items ?? [];
 }
 
 export async function getNoteById(noteId) {
