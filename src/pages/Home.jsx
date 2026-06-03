@@ -1,5 +1,9 @@
+import ListCom from "../components/ListCom";
+
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <ListCom />
+    </div>
+  );
 }

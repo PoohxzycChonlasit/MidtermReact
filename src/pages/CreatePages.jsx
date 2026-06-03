@@ -1,3 +1,10 @@
+import CreateCom from "../components/CreateCom";
+// import FromCom from "../components/FromCom";
+
 export default function CreatePages() {
-  return <div>CreatePages</div>;
+  return (
+    <div>
+      <CreateCom />
+    </div>
+  );
 }

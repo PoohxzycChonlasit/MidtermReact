@@ -1,6 +1,6 @@
 import { api } from './client';
 
-const userId = '8f8da2a4-2dd1-4c3c-80cb-0cc371c43ec1';
+const userId = 'e876b7df-e9d8-434d-ac03-3dd2770b9a1c';
 
 export async function getNotes(params = {}) {
   const { data } = await api.get(
@@ -10,7 +10,7 @@ export async function getNotes(params = {}) {
     }
   );
 
-  return data;
+  return data?.data?.items ?? [];
 }
 
 export async function getNoteById(noteId) {
@@ -21,10 +21,10 @@ export async function getNoteById(noteId) {
   return data;
 }
 
-export async function createNote(payload) {
+export async function createNote(load) {
   const { data } = await api.post(
     `/users/${userId}/notes`,
-    payload
+    load
   );
 
   return data;
