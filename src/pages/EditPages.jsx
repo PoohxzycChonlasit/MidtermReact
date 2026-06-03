@@ -1,3 +1,9 @@
+import EditCom from "../components/EditCom";
+
 export default function EditPages() {
-  return <div>EditPages</div>;
+  return (
+    <div>
+      <EditCom />
+    </div>
+  );
 }

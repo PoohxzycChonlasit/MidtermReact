@@ -1,10 +1,10 @@
-import CreateCom from "../components/CreateCom";
-// import FromCom from "../components/FromCom";
+// import CreateCom from "../components/CreateCom";
+import FromCom from "../components/FromCom";
 
 export default function CreatePages() {
   return (
     <div>
-      <CreateCom />
+      <FromCom />
     </div>
   );
 }
